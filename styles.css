@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  background-color: rgb(253, 246, 230);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 > a {
+  font-family: "WindSong", cursive;
+  font-size: 2.5rem;
+  color: rgb(211, 190, 104);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid rgba(211, 190, 104, 0);
+  padding-bottom: 8px;
+  transition: all 0.4s ease;
+}
+
+.navbar > a:hover {
+  border-bottom: 2px solid rgb(211, 190, 104);
+  color: rgb(211, 190, 104);
+}
+
+.navbar {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+/* Carousel */
+
+.carousel {
+  margin: 25px 0px 25px 0px;
+  width: 900px;
+  height: 500px;
+  position: relative;
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: rgba(255, 255, 255, 0.854);
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
+}
+
+.pause,
+.play {
+  position: absolute;
+  z-index: 4;
+  top: 92%;
+  left: 48%;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 55%;
+  transition: all 0.3s ease;
+}
+
+.pause {
+  background-image: url("./pages/images/pause-final.png");
+}
+
+.play {
+  display: none;
+  background-image: url("./pages/images/play-final.png");
+}
+
+.pause:hover,
+.play:hover {
+  opacity: 85%;
+}
+
+/* -------- */
+
+.story-div {
+  height: 400px;
+  width: 100vw;
+  background-image: url("./pages/images//paige-cody-RdlBK-0XOxk-unsplash.jpg");
+  background-color: pink;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.story-bg {
+  background-color: rgba(255, 255, 255, 0.728);
+  width: 400px;
+  padding: 80px 80px 80px 80px;
+}
+
+.empty {
+  height: 100vh;
+}
