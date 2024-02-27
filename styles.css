@@ -1,9 +1,38 @@
+html, body, div, span, h1, h2, h3, h4, 
+h5, h6, p, a, em, img, ol, ul, li,
+fieldset, form, label, footer
+ {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+footer, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+/* My Css */
+
 body {
-  margin: 0;
   background-color: rgb(253, 246, 230);
+  background-color: rgb(255, 250, 243);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  font-family: "Cormorant", serif;
+}
+
+h1 {
+  padding: 30px 0px 30px 0px;
 }
 
 h1 > a {
@@ -12,7 +41,17 @@ h1 > a {
   color: rgb(211, 190, 104);
 }
 
+.navbar {
+  border-bottom: 1px solid rgba(211, 190, 104, 0.418);
+  margin: 0px 5px 0px 5px;
+}
+
+.dropdown-icon {
+  font-size: .9rem;
+}
+
 a {
+  font-size: 1.3rem;
   text-decoration: none;
   color: black;
   border-bottom: 2px solid rgba(211, 190, 104, 0);
@@ -20,23 +59,25 @@ a {
   transition: all 0.4s ease;
 }
 
-.navbar > a:hover {
+.navbar > a:hover, .jewellery-items > a:hover {
   border-bottom: 2px solid rgb(211, 190, 104);
   color: rgb(211, 190, 104);
 }
 
-.navbar {
+.navbar, .jewellery-items {
   display: flex;
   gap: 30px;
   justify-content: center;
   font-size: 1.1rem;
+  flex-wrap: wrap;
 }
 
 /* Carousel */
 
 .carousel {
-  margin: 25px 0px 25px 0px;
-  width: 900px;
+  margin: 25px 0px 50px 0px;
+  width: 80vw;
+  max-width: 1000px;
   height: 500px;
   position: relative;
 }
@@ -127,12 +168,12 @@ a {
   opacity: 85%;
 }
 
-/* -------- */
+/* Story Section */
 
 .story-div {
   height: 400px;
   width: 100vw;
-  background-image: url("./pages/images//paige-cody-RdlBK-0XOxk-unsplash.jpg");
+  background-image: url("./pages/images/paige-cody-RdlBK-0XOxk-unsplash.jpg");
   background-color: pink;
   background-size: cover;
   background-repeat: no-repeat;
@@ -141,14 +182,528 @@ a {
   align-items: center;
   text-align: center;
   font-size: 1.2rem;
+  margin-bottom: 30px;
+
+  background-attachment: fixed;
 }
 
 .story-bg {
   background-color: rgba(255, 255, 255, 0.728);
   width: 400px;
-  padding: 80px 80px 80px 80px;
+  padding: 80px 80px 60px 80px;
 }
 
-.empty {
-  height: 100vh;
+.more-button {
+  text-align: right;
+  margin-top: 40px;
+  transition: all .3s ease-in-out;
 }
+
+.more-button > a {
+  color: rgb(201, 175, 71);;
+  transition: all .3s ease-in-out;
+  font-weight: bold;
+}
+
+.more-button:hover {
+  transform: scale(1.03);
+}
+
+.more-button > a:hover {
+  color: rgb(236, 219, 151);
+}
+
+.story-heading {
+  font-family: "Patrick Hand", cursive;
+  font-size: 2.5rem;
+  color: rgb(201, 175, 71);
+  margin-bottom: 8px;
+}
+
+/* Jewelly section */
+
+.jewellery-heading {
+  margin-bottom: 30px;
+  color: rgb(57, 57, 57);
+  
+}
+
+.jewellery-section-one, .jewellery-section-two, .jewellery-section-names {
+
+  margin-bottom: 40px;
+  width: 70vw;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.box {
+  background-color: grey;
+  max-width: 550px;
+  max-height: 450px;
+  height: 50vw;
+  transition: transform .3s ease-in;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.box:hover {
+  transform: scale(1.02);
+}
+
+.box.bracelets {
+  background-image: url("./pages/images/bracelets.jpg");
+}
+
+.box.necklaces {
+  background-image: url("./pages/images/necklaces.jpg");
+}
+
+.box.earrings {
+  background-image: url("./pages/images/earrings.jpg");
+}
+
+.box.sets {
+  background-image: url("./pages/images/sets.jpg");
+}
+
+.heading-link {
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.288);
+  border-radius: 2px;
+  padding: 5px;
+  width: 120px;
+}
+
+.heading-link:hover {
+  color: rgb(183, 164, 89);
+  border: 1px solid rgb(165, 141, 47);
+}
+
+.jewellery-section-names {
+  justify-items: center;
+  text-align: center;
+}
+
+.jewellery-heading {
+  font-size: 2.5rem;
+}
+
+/* Special Section */
+
+.special-section {
+  height: 500px;
+  width: 100vw;
+  background-color: rgb(253, 246, 230);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.special-container {
+  width: 75%;
+  height: 300px;
+  background-color: rgba(0, 128, 0, 0);
+  max-width: 1300px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.special-image {
+  height: 375px;
+  min-width: 500px;
+  background-color: rgb(211, 190, 104);
+  background-image: url("./pages/images/speical-img.jpg");
+  border: 2px solid rgb(211, 190, 104);
+
+
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.special-text-div > h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: rgb(211, 190, 104);
+}
+
+.special-text-div > p {
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+}
+
+.learn-more-button {
+  padding: 10px 35px 10px 35px;
+  border: none;
+  background-color: rgb(211, 190, 104);
+  color: rgb(254, 247, 230);
+  transition: all .2s ease-in-out;
+  font-size: 1rem;
+  letter-spacing: .5px;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+.learn-more-button:hover {
+  background-color: rgb(190, 168, 80);
+}
+
+/* Inspiration Section */
+
+.inspiration-section {
+  margin: 80px 0px 80px 0px;
+  width: 70vw;
+  max-width: 1300px;
+  background-color: rgba(144, 238, 144, 0);
+  height: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.insta-img-div, .insta-card {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.insta-img-div {
+  background-color: rgba(0, 255, 255, 0);
+  height: 100%;
+  width: 60%;
+  background-image: url("./pages/images/instagram-page.jpg");
+}
+
+.insta-card {
+  background-position: center;
+  background-color: rgba(253, 246, 230, 0.858);
+  width: 60%;
+  max-width: 500px;
+  height: 70%;  
+  position: absolute;
+  left: 40%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.098);
+  border: 2px solid rgb(211, 190, 104);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.insta-card > p {
+  padding: 30px;
+  font-size: 1.5rem;
+  font-family: "Patrick Hand", cursive;
+  color: rgba(37, 37, 37, 0.63);
+}
+
+.insta-link {
+  align-self: start;
+  padding-left: 30px;
+}
+
+.insta-link > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.insta-icon {
+  width: 20px;
+  height: 20px;
+  opacity: 67%;
+}
+
+/* Footer Section */
+
+footer {
+  background-color: rgb(246, 238, 220);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1500px;
+}
+
+.top-footer, .bottom-footer, .middle-footer, .links-heading {
+  background-color: rgba(128, 128, 128, 0);
+  margin: 8px 45px 8px 45px;
+}
+
+.top-one, .top-two, .top-three {
+  background-color: rgba(78, 209, 78, 0);
+  margin: 0px 5px 5px 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-one > a, .top-two > a, .top-three > a {
+  border: none;
+  font-size: 1.1rem;
+  margin-top: 2px;
+}
+
+.top-one > a:hover, .top-two > a:hover, .top-three > a:hover {
+  color:rgb(165, 141, 47)
+}
+
+.links-heading {
+  width: 70vw;
+  margin-top: 20px;
+}
+
+.footer-heading {
+  margin-bottom: 8px;
+}
+
+.top-footer {
+  width: 70vw;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bottom-footer, .middle-footer {
+  text-align: center;
+}
+
+.middle-footer {
+  display: flex;
+  margin: 10px 0px 10px 0px;
+}
+
+.footer-social {
+  font-size: 1rem;
+}
+
+.links-heading > p, .footer-heading {
+  font-weight: bold;
+  color:rgb(57, 57, 57);
+  font-size: 1.3rem;
+}
+
+
+/* put in jewellerysection */
+
+.jewellery-button {
+   display: none;
+}
+
+
+/* Media query for jewellery section */
+
+@media only screen and (max-width: 1300px) {
+  .jewellery-section-one, .jewellery-section-two, .jewellery-section-names {
+    width: 65vw;
+  }
+  
+  .box {
+    max-width: 400px;
+    max-height: 300px;
+    height: 50vw;
+  }
+
+  .heading {
+    margin-bottom: 20px; 
+  }
+
+  /* navbar and footer link sizes under 1300px  */
+
+  a {
+    font-size: 1.1rem;
+  }
+
+  .links-heading > p, .footer-heading {
+    font-size: 1.1rem;
+  }
+
+  .top-one > a, .top-two > a, .top-three > a {
+    font-size: 1rem;
+  }
+}
+
+/* Media query under 1000px */
+
+@media only screen and (max-width: 1000px) {
+  .carousel {
+    width: 80vw;
+    height: 350px;
+  }
+  .special-image {
+    height: 226px;
+    min-width: 300px;
+  }
+  .special-text-div > h2 {
+    font-size: 1.5rem;
+  }
+
+  .special-text-div > p, .insta-card > p {
+    font-size: 1rem;
+  }
+
+  .insta-card > p {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .jewellery-section-one, .jewellery-section-two, .jewellery-section-names {
+    width: 90vw;
+  }
+  
+  .box {
+    height: 35vw;
+  }
+
+  .heading {
+    width: 100px;
+    padding: 6px;
+    margin-bottom: 10px; 
+  }  
+}
+
+/* media query for special section  */
+
+@media only screen and (max-width: 700px) {
+  .special-section{
+   height: 650px;
+  }
+
+ .special-container {
+   height: 600px;
+   flex-direction: column;
+   text-align: center;
+   justify-content: center;
+ }
+}
+
+/* Dropdown Functionality */
+
+@media only screen and (max-width: 550px) {
+  .jewellery-button{
+    display: block;
+  }
+
+  .jewellery-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 151px;
+    z-index: 5;
+    gap: 0px;
+    width: 100vw;
+    text-align: center;
+  }
+
+  .jewellery-items > a {
+    padding: 11px 35px 11px 30px;
+    background-color: rgb(211, 190, 104);
+  }
+
+  .jewellery-items > a:hover {
+    color: rgb(31, 31, 31);
+    background-color: rgb(201, 178, 86);
+  }
+
+  .active {
+    display: flex;
+  }
+
+  /* footer buttons column under 550px*/
+
+  .middle-footer {
+    flex-direction: column;
+    gap: 8px;
+   }
+
+   .carousel {
+    width: 100vw;
+    height: 200px;
+  }
+
+  .pause, .play {
+    top: 85%;
+  }
+
+  .story-bg {
+    width: 300px;
+    padding: 20px 20px 20px 20px;
+  }
+
+  .story-heading {
+    font-size: 2rem;
+  }
+
+  .story-paragraph {
+    font-size: 1rem;
+  }
+  .story-div {
+    height: 320px;
+  }
+
+  .jewellery-heading {
+    font-size: 1.9rem;
+  }
+  .insta-link {
+    padding-left: 15px;
+  }
+
+  
+  .inspiration-section {
+    width: 90vw;
+    justify-content: flex-start;
+  }
+
+  .insta-card {
+    left: 30%;
+    top: 30%;
+  }
+
+  .insta-img-div, .insta-card {
+    margin-left: 10px;
+}
+
+  .top-footer, .bottom-footer, .middle-footer, .links-heading {
+    margin: 8px 25px 8px 25px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .story-bg {
+    width: 260px;
+    padding: 20px 20px 20px 20px;
+  } 
+}
+
+  
+/* Media query above 1900px */
+
+@media only screen and (min-width: 1900px) {
+  .jewellery-section-one, .jewellery-section-two, .jewellery-section-names {
+    gap: 50px;
+    width: 40vw;
+  }
+
+  .footer-wrapper {
+    width: 70vw;
+  }
+  
+  .top-footer, .links-heading {
+    width: 70%;
+  }
+}
+

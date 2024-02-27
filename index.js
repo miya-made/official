@@ -2,6 +2,9 @@ const buttons = document.querySelectorAll("[data-carousel-button]");
 const nextButton = document.querySelector(".next");
 const playButton = document.querySelector(".play");
 const pauseButton = document.querySelector(".pause");
+const jewelleryButton = document.querySelector(".jewellery-button");
+const container = document.querySelector(".jewellery-items");
+const braceletsDiv = document.querySelector(".bracelets");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -37,3 +40,11 @@ buttons.forEach((button) => {
 //   playButton.style.display = "none";
 //   pauseButton.style.display = "block";
 // });
+
+jewelleryButton.addEventListener('click', () => { 
+  container.classList.toggle("active");  
+})
+
+// braceletsDiv.addEventListener('click', () => {
+//   location.replace("./pages/bracelets.html");
+// })

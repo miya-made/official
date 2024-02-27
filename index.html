@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Miya Ornaments</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Miya</title>
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Patrick+Hand&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1><a href="#">Miya</a></h1>
+    <h1><a href="./index.html">Miya</a></h1>
     <div class="navbar">
-      <a href="#">Bracelets</a>
-      <a href="#">Necklaces</a>
-      <a href="#">Earrings</a>
-      <a href="#">Sets</a>
-      <a href="#">Especially for you</a>
-      <a href="#">Contact</a>
+      <a href="#" class="jewellery-button">Jewellery <span class="dropdown-icon">&#11206;</span></a>
+      <div class="jewellery-items">
+        <a href="./pages/bracelets.html" class="jewellery-item">Bracelets</a>
+        <a href="./pages/necklaces.html" class="jewellery-item">Necklaces</a>
+        <a href="./pages/earrings.html" class="jewellery-item">Earrings</a>
+        <a href="./pages/sets.html" class="jewellery-item">Sets</a>
+        <a href="./pages/special.html" class="jewellery-item">Specially for you</a>
+      </div>
+      
+      <a href="./pages/about.html">About Us</a>
+      <a href="./pages/contact.html">Contact</a>
     </div>
 
     <!-- Carousel  -->
@@ -28,20 +30,20 @@
     <section aria-label="Newest Photos">
       <div class="carousel" data-carousel>
         <button class="carousel-button prev" data-carousel-button="prev">
-          &#60;
+          &#10094;
         </button>
         <button class="carousel-button next" data-carousel-button="next">
-          &#62;
+          &#10095;
         </button>
         <ul data-slides>
           <li class="slide" data-active>
-            <img src="./pages/images/2.jpg" alt="Nature Image #1" />
+            <img src="./pages/images/carousel-1.jpg" alt="Nature Image #1" />
           </li>
           <li class="slide">
-            <img src="./pages/images/3.jpg" alt="Nature Image #2" />
+            <img src="./pages/images/carousel-2.jpg" alt="Nature Image #2" />
           </li>
           <li class="slide">
-            <img src="./pages/images/1.jpg" alt="Nature Image #3" />
+            <img src="./pages/images/carousel-3.jpg" alt="Nature Image #3" />
           </li>
         </ul>
         <button class="play"></button>
@@ -53,16 +55,99 @@
 
     <div class="story-div">
       <div class="story-bg">
-        <h2>Our Story</h2>
+        <h2 class="story-heading">Our Story</h2>
         <p class="story-paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna id
-          volutpat lacus laoreet non curabitur.
+          <span>Why i stared making jewellery... </span> I had immense love for jewellery to add to my
+          personality in a decent proportion. I often ended up not buying any piece of jewellery during shopping
+          because...
         </p>
+        <div class="more-button"><a href="./pages/story.html">MORE &#8594;</a></div>
       </div>
     </div>
 
-    <div class="empty"></div>
+    <h2 class="jewellery-heading">Jewellery</h2>
+
+      <div class="jewellery-section-one">
+        <div class="box bracelets">
+        </div>
+        <div class="box necklaces">
+        </div>
+      </div>
+      <div class="jewellery-section-names">
+        <div><a href="./pages/bracelets.html" class="heading-link">Bracelets</a></div>
+        <div><a href="./pages/necklaces.html" class="heading-link">Necklaces</a></div>
+      </div>
+      
+      <div class="jewellery-section-two">
+        <div class="box earrings">
+        </div>
+        <div class="box sets">
+        </div>
+      </div>
+      <div class="jewellery-section-names">
+        <div><a href="./pages/necklaces.html" class="heading-link">Earrings</a></div>
+        <div><a href="./pages/sets.html" class="heading-link">Sets</a></div>
+      </div>
+
+      <div class="special-section">
+        <div class="special-container">
+          <div class="special-image"></div>
+          <div class="special-text-div">
+            <h2>Specially For You</h2>
+            <p>Integer accumsan nisl vitae lacus dapibus, sed consequat mauris fermentum. Ut eu lobortis nunc. Donec et dolor eros. Pellentesque in orci commodo, mollis enim quis, tincidunt purus. Aenean rutrum quis ex a sollicitudin.
+            </p>
+            <a href="./pages/special.html"><button class="learn-more-button">Learn More</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="inspiration-section">
+        <div class="insta-img-div"></div>
+        <div class="insta-card">
+          <p>Immerse yourself in our Instagram feed where we showcase our work in a visuallly stunning manner, designed to inspire and elevate your creativity</p>
+          <div class="insta-link"><a href="https://www.instagram.com/miya_made7" class="heading-link"  target="_blank" rel="noopener noreferrer"><img src="./pages/images/instagram-icon.png" alt="instagram icon" class="insta-icon"/>Instagram</a></div>
+        </div>
+      </div>
+
+      <!-- <div class="temp"></div> -->
+
+    <footer>
+      <div class="footer-wrapper">
+          <div class="links-heading">
+            <p>Quick Links</p>
+          </div>
+          <div class="top-footer">  
+            <div class="top-one">
+              <p class="footer-heading">Jewellery</p>
+              <a href="./pages/bracelets.html" class="jewellery-item">Bracelets</a>
+              <a href="./pages/necklaces.html" class="jewellery-item">Necklaces</a>
+              <a href="./pages/earrings.html" class="jewellery-item">Earrings</a>
+              <a href="./pages/sets.html" class="jewellery-item">Sets</a>
+              <a href="./pages/special.html" class="jewellery-item">Specially for you</a>
+            </div>
+            <div class="top-two">
+              <p class="footer-heading">Who we are</p>
+              <a href="./pages/story.html" class="jewellery-item">Our Story</a>
+              <a href="./pages/about.html" class="jewellery-item">About Us</a>
+            </div>
+            <div class="top-three">
+              <p class="footer-heading">Customer Service</p>
+              <a href="./pages/care.html" class="jewellery-item">Jewellery care Instructions</a>
+              <a href="./pages/contact.html" class="jewellery-item">Contact Us</a>
+              <a href="./pages/contact.html" class="jewellery-item">Shipping</a>
+              <a href="./pages/contact.html" class="jewellery-item">Returns/Exchange</a>   
+            </div>
+          </div>
+          <div class="middle-footer">
+            <div class="insta-link"><a href="https://www.instagram.com/miya_made7" class="heading-link footer-social"  target="_blank" rel="noopener noreferrer"><img src="./pages/images/instagram-icon.png" alt="instagram icon" class="insta-icon"/>Inspiration</a></div>
+            <div class="insta-link"><a href="#" class="heading-link footer-social"  target="_blank" rel="noopener noreferrer"><img src="./pages/images/instagram-icon.png" alt="instagram icon" class="insta-icon"/>All Products</a></div>
+            <div class="insta-link"><a href="https://www.pinterest.com/miya_made7" class="heading-link footer-social"  target="_blank" rel="noopener noreferrer"><img src="./pages/images/pin-icon.png" alt="pinterest icon" class="insta-icon"/>Pinterest</a></div>
+          </div>
+          <div class="bottom-footer">
+            © 2024 Miya Designs
+          </div>
+      </div>
+    </footer>
 
     <script type="text/javascript" src="./index.js"></script>
   </body>
