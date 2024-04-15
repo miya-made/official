@@ -23,28 +23,28 @@ buttons.forEach((button) => {
   });
 });
 
-// const clickThisButton = () => {
-//   nextButton.click();
-// };
+const clickThisButton = () => {
+  nextButton.click();
+};
 
-// let interval = setInterval(clickThisButton, 4000);
+let interval = setInterval(clickThisButton, 4000);
 
-// pauseButton.addEventListener("click", () => {
-//   clearInterval(interval);
-//   pauseButton.style.display = "none";
-//   playButton.style.display = "block";
-// });
+pauseButton.addEventListener("click", () => {
+  clearInterval(interval);
+  pauseButton.style.display = "none";
+  playButton.style.display = "block";
+});
 
-// playButton.addEventListener("click", () => {
-//   interval = setInterval(clickThisButton, 4000);
-//   playButton.style.display = "none";
-//   pauseButton.style.display = "block";
-// });
+playButton.addEventListener("click", () => {
+  interval = setInterval(clickThisButton, 4000);
+  playButton.style.display = "none";
+  pauseButton.style.display = "block";
+});
 
 jewelleryButton.addEventListener('click', () => { 
   container.classList.toggle("active");  
 })
 
-// braceletsDiv.addEventListener('click', () => {
-//   location.replace("./pages/bracelets.html");
-// })
+braceletsDiv.addEventListener('click', () => {
+  location.replace("./pages/bracelets.html");
+})

@@ -166,6 +166,34 @@ footer {
   font-size: 1.3rem;
 }
 
+/* Other CSS */
+
+.cheeebo {
+  width: 100vw;
+}
+
+.dummy-img {
+  width: 350px;
+  height: 350px;
+  background-color: green;
+}
+
+.images-div {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.item-heading {
+  font-size: 2.5rem;
+  color: rgb(39, 38, 38);
+  margin-top: 20px;
+}
+
 /* Media query under 1300px */
 
 @media only screen and (max-width: 1300px) {
@@ -225,6 +253,23 @@ footer {
     flex-direction: column;
     gap: 8px;
    }
+
+   /* TESTING */
+   .dummy-img {
+    width: 150px;
+    height: 150px;
+    background-color: pink;
+   }
+}
+
+/* Media query under 350 */
+
+@media only screen and (max-width: 350px) {
+  .dummy-img {
+    width: 120px;
+    height: 120px;
+    background-color: lightblue;
+   }
 }
 
 /* media query above 1800px */
@@ -239,6 +284,3 @@ footer {
   }
 }
 
-.cheeebo {
-  width: 100vw;
-}
